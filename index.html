@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Md Parvez - Portfolio</title>
+    <style>
+        body{
+            #contact {
+    background-color: #f8f8f8;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d2d6dc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+#contact button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3490dc;
+    color: #fff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #2779bd;
+}
+        }
+         /* Add your styling for the social media buttons */
+         .social-media-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-media-icons li {
+            display: inline-block;
+        }
+
+        .social-media-icons img {
+            width: 40px; /* Adjust the size as needed */
+            height: 40px; /* Adjust the size as needed */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-blue-100">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Md Parvez</div>
+            <div  class="flex space-x-4">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Profile Section -->
+<section id="profile" class="py-16">
+    <div class="container mx-auto text-center">
+        <!-- Profile Picture -->
+        <img src="profile picture.png" alt="Profile Picture" class="w-80 h-90 rounded-full mx-auto mb-4">
+
+        <h2 class="text-3xl font-bold mb-2">Md Parvez</h2>
+        <p class="text-gray-600">Web Developer & Designer</p>
+    </div>
+</section>
+
+    
+    
+    
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center text-white">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+            <p class="text-lg">Web Developer & Designer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <p class="text-gray-700">
+                Md Parvez is a diligent and motivated student who approaches academic challenges with enthusiasm and a strong work ethic. With a keen interest in [mention specific subjects or areas of study], Parvez consistently demonstrates a hunger for knowledge and a proactive attitude towards his studies. Known for his effective communication skills and collaborative spirit, he actively engages in classroom discussions and group projects, contributing valuable insights to the learning environment.. ...</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Skills</h2>
+            <ul class="list-disc list-inside">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Projects</h2>
+            <p>project 1</p>
+        </div>
+    </section>
+
+
+   
+    <!-- Smooth scrolling JavaScript -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-200">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+        <p class="text-gray-700">Feel free to reach out to me using the form below or via email at mdparvez33221@gmailcom.</p>
+
+        <form action="#" method="post" class="mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4" class="mt-1 p-2 w-full border rounded-md"></textarea>
+            </div>
+
+            <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Send Message</button>
+        </form>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-4">
+    <p class="text-sm">© 2024 Your Name</p>
+</footer>
+<ul class="social-media-icons">
+    <li>
+        <a href="https://www.linkedin.com/in/mdparvez" target="_blank" rel="noopener noreferrer">
+            <img src="linkedin-icon.png" alt="LinkedIn">
+        </a>
+    </li>
+    <li>
+        <a href="https://twitter.com/mdparvez" target="_blank" rel="noopener noreferrer">
+            <img src="twitter-icon.png" alt="Twitter">
+        </a>
+    </li>
+    <!-- Add more social media buttons as needed -->
+</ul>
+
+
+
+
+
+
+
+
+</body>
+</html>
